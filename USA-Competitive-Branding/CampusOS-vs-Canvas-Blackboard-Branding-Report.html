@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:locale" content="en_US">
+<title>CampusOS — USA Competitive Branding Analysis vs. Canvas &amp; Blackboard</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #e8ecf0;
+  color: #1a202c;
+  font-size: 10.5pt;
+  line-height: 1.65;
+}
+
+/* PRINT BAR */
+.print-bar {
+  position: fixed; top: 0; left: 0; right: 0;
+  background: #0D1B2A; padding: 10px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  z-index: 999; box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.print-bar span { color: #94a3b8; font-size: 12px; }
+.print-btn {
+  background: #FFC100; color: #0D1B2A; border: none;
+  padding: 8px 22px; border-radius: 5px; font-size: 13px;
+  font-weight: 700; cursor: pointer; letter-spacing: 0.3px;
+}
+.print-btn:hover { background: #e6ad00; }
+
+.doc-wrap { max-width: 900px; margin: 56px auto 40px; }
+
+.page { background: #fff; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.12); }
+
+/* COVER */
+.cover { background: #0D1B2A; padding: 72px 72px 56px; min-height: 440px; display: flex; flex-direction: column; justify-content: space-between; }
+.cover-brand { color: #FFC100; font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 52px; }
+.cover-title { font-size: 44px; font-weight: 800; color: #fff; line-height: 1.06; }
+.cover-title .accent { color: #FFC100; }
+.cover-divider { width: 56px; height: 3px; background: #FFC100; margin: 24px 0; }
+.cover-sub { font-size: 15px; color: #94a3b8; font-weight: 300; margin-bottom: 48px; max-width: 560px; }
+.cover-meta-row { display: flex; gap: 0; border-top: 1px solid #1e3a5f; padding-top: 20px; }
+.cover-meta-item { flex: 1; padding-right: 18px; }
+.cover-meta-item label { display: block; font-size: 8px; text-transform: uppercase; letter-spacing: 1.5px; color: #475569; margin-bottom: 5px; }
+.cover-meta-item span { font-size: 11px; color: #cbd5e1; }
+.cover-conf { font-size: 9px; font-weight: 800; color: #ef4444; letter-spacing: 2px; text-transform: uppercase; margin-top: 28px; }
+
+/* BODY */
+.body-page { padding: 52px 60px; }
+.section-label { font-size: 8px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #FFC100; margin-bottom: 6px; }
+h1 { font-size: 22px; font-weight: 800; color: #0D1B2A; margin-bottom: 4px; padding-bottom: 10px; border-bottom: 3px solid #FFC100; }
+h2 { font-size: 14px; font-weight: 700; color: #1E3A5F; margin-top: 28px; margin-bottom: 8px; }
+h3 { font-size: 11.5px; font-weight: 700; color: #0077B6; margin-top: 18px; margin-bottom: 6px; }
+p { margin-bottom: 11px; color: #374151; }
+ul { margin: 10px 0 10px 22px; color: #374151; }
+li { margin-bottom: 7px; }
+
+.section-block { background: #1E3A5F; color: #fff; padding: 18px 24px; margin: 32px 0 20px; display: flex; align-items: center; gap: 18px; border-radius: 4px; }
+.section-block .snum { font-size: 32px; font-weight: 800; color: #FFC100; line-height: 1; }
+.section-block .stitle { font-size: 16px; font-weight: 700; }
+.section-block .ssub { font-size: 10px; color: #94a3b8; margin-top: 2px; }
+
+.exec-box { background: #0D1B2A; padding: 26px 30px; border-radius: 6px; margin: 18px 0; }
+.exec-box .box-title { font-size: 11px; font-weight: 700; color: #FFC100; margin-bottom: 10px; letter-spacing: 0.5px; }
+.exec-box p { color: #cbd5e1; margin-bottom: 8px; font-size: 10.5px; }
+.exec-box p:last-child { margin-bottom: 0; }
+
+.findings-box { background: #f8fafc; border-left: 4px solid #FFC100; padding: 20px 24px; border-radius: 0 6px 6px 0; margin: 18px 0; }
+.finding-row { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 9px; }
+.finding-row:last-child { margin-bottom: 0; }
+.fnm { background: #FFC100; color: #0D1B2A; font-weight: 800; font-size: 9px; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+.finding-row p { margin: 0; font-size: 10.5px; color: #374151; }
+
+.callout { background: #fffbeb; border: 1px solid #fde68a; border-left: 4px solid #FFC100; padding: 14px 18px; border-radius: 0 5px 5px 0; margin: 14px 0; }
+.callout p { margin: 0; font-size: 10.5px; color: #374151; }
+
+.note { background: #eef6fb; border: 1px solid #cbe4f3; border-left: 4px solid #0077B6; padding: 14px 18px; border-radius: 0 5px 5px 0; margin: 14px 0; }
+.note p { margin: 0; font-size: 10px; color: #374151; }
+
+/* TABLES */
+table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 10px; }
+thead tr { background: #0D1B2A; }
+th { color: #fff; padding: 10px 12px; font-weight: 600; font-size: 9px; text-transform: uppercase; letter-spacing: 0.6px; text-align: left; }
+td { padding: 9px 12px; border-bottom: 1px solid #e5e7eb; color: #374151; vertical-align: top; line-height: 1.5; }
+tr:nth-child(even) td { background: #f9fafb; }
+.dim { font-weight: 700; color: #0D1B2A; }
+.col-co { background: #fffdf5 !important; }
+th.col-co { background: #1E3A5F; }
+
+.tag { padding: 2px 8px; border-radius: 3px; font-size: 8.5px; font-weight: 700; white-space: nowrap; display: inline-block; }
+.tag-r { background: #fee2e2; color: #991b1b; }
+.tag-g { background: #dcfce7; color: #166534; }
+.tag-a { background: #fef3c7; color: #92400e; }
+.tag-b { background: #dbeafe; color: #1e40af; }
+
+/* SCORECARD */
+.score-row td { font-size: 10px; }
+.score { font-weight: 800; font-size: 11px; }
+.s-co { color: #d97706; }
+.s-cv { color: #166534; }
+.s-bb { color: #1e40af; }
+.bar-wrap { background: #eef2f7; border-radius: 4px; height: 8px; width: 100%; overflow: hidden; margin-top: 3px; }
+.bar { height: 8px; border-radius: 4px; }
+
+/* STATS */
+.stats-row { display: flex; gap: 12px; margin: 18px 0; }
+.stat-card { flex: 1; background: #0D1B2A; border-radius: 6px; padding: 18px 14px; text-align: center; }
+.stat-n { font-size: 24px; font-weight: 800; color: #FFC100; line-height: 1; }
+.stat-l { font-size: 8.5px; color: #94a3b8; margin-top: 7px; line-height: 1.4; }
+
+/* COMPETITOR CARDS */
+.comp-grid { display: flex; flex-wrap: wrap; gap: 12px; margin: 14px 0; }
+.comp-card { flex: 1; min-width: 220px; border: 1px solid #e5e7eb; border-radius: 6px; padding: 16px 18px; background: #fff; }
+.comp-card.cv { border-top: 3px solid #166534; }
+.comp-card.bb { border-top: 3px solid #1e40af; }
+.comp-type { font-size: 8px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px; }
+.comp-card.cv .comp-type { color: #166534; }
+.comp-card.bb .comp-type { color: #1e40af; }
+.comp-card h4 { font-size: 11.5px; font-weight: 700; color: #0D1B2A; margin-bottom: 6px; }
+.comp-card p { font-size: 9.5px; color: #6b7280; margin: 0 0 6px; line-height: 1.5; }
+.comp-card .lbl { font-weight: 700; color: #374151; }
+
+/* ACTIONS */
+.action-row { display: flex; gap: 12px; margin: 16px 0; }
+.action-box { flex: 1; background: #1E3A5F; border-radius: 6px; padding: 16px 18px; }
+.action-num { font-size: 22px; font-weight: 800; color: #FFC100; line-height: 1; margin-bottom: 6px; }
+.action-box p { color: #cbd5e1; font-size: 10px; margin: 0; line-height: 1.5; }
+
+.doc-footer { padding: 16px 60px; background: #0D1B2A; display: flex; justify-content: space-between; align-items: center; }
+.doc-footer span { font-size: 9px; color: #475569; }
+
+@media print {
+  body { background: #fff; font-size: 10pt; }
+  .print-bar { display: none; }
+  .doc-wrap { max-width: 100%; margin: 0; }
+  .page { box-shadow: none; margin-bottom: 0; page-break-after: always; }
+  .page:last-child { page-break-after: avoid; }
+  .body-page { padding: 36px 44px; }
+  .stats-row, .comp-grid, .action-row, .cover-meta-row { display: flex; }
+  h2 { page-break-after: avoid; }
+  table { page-break-inside: avoid; }
+  .exec-box, .findings-box, .callout, .note { page-break-inside: avoid; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+}
+@page { size: letter; margin: 0.5in; }
+</style>
+</head>
+<body>
+
+<div class="print-bar">
+  <span>CampusOS — USA Competitive Branding Analysis &nbsp;|&nbsp; June 2026</span>
+  <button class="print-btn" onclick="window.print()">⬇ Save as PDF / Print</button>
+</div>
+
+<div class="doc-wrap">
+
+<!-- COVER -->
+<div class="page">
+<div class="cover">
+  <div class="cover-brand">CampusOS &nbsp;by Engaze</div>
+  <div>
+    <div class="cover-title">USA Competitive<br><span class="accent">Branding Analysis</span></div>
+    <div class="cover-divider"></div>
+    <div class="cover-sub">How the CampusOS website compares to Canvas (Instructure) and Blackboard — what we lack, and what to fix to win the U.S. market.</div>
+    <div class="cover-meta-row">
+      <div class="cover-meta-item"><label>Prepared For</label><span>CampusOS Executive Leadership</span></div>
+      <div class="cover-meta-item"><label>Benchmarked</label><span>Canvas · Blackboard</span></div>
+      <div class="cover-meta-item"><label>Date</label><span>June 2026</span></div>
+      <div class="cover-meta-item"><label>Document</label><span>Competitive Analysis</span></div>
+    </div>
+    <div class="cover-conf">■ Confidential — For Internal Use Only</div>
+  </div>
+</div>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="page">
+<div class="body-page">
+
+  <div class="section-label">Executive Summary</div>
+  <h1>The Branding Gap</h1>
+
+  <div class="exec-box">
+    <div class="box-title">The Bottom Line</div>
+    <p>CampusOS has a modern, well-engineered product and clean visual foundations — but its public website is still branded for the <strong>Indian</strong> market. Against Canvas and Blackboard, a U.S. higher-ed buyer landing on campusos.co encounters no familiar vocabulary, no FERPA, no U.S. proof, and no pricing in dollars. The brand currently fails the first 5-second credibility test for a North American buyer.</p>
+    <p style="color:#FFC100;"><strong>The good news: every gap identified here is a branding, messaging, and trust-signal fix — not a product rebuild. A U.S.-credible brand presence is achievable in 60–90 days.</strong></p>
+  </div>
+
+  <h2>What We Found</h2>
+  <div class="findings-box">
+    <div class="finding-row"><div class="fnm">1</div><p>CampusOS's site ships <strong>en_IN locale, INR pricing, and India-only terminology</strong> (TnP CRM, NAAC, NEP, UGC, "placement drive"). To a U.S. buyer this reads as "not built for us."</p></div>
+    <div class="finding-row"><div class="fnm">2</div><p><strong>Zero U.S. trust signals.</strong> No FERPA, no SOC 2, no U.S. institution logos, no G2/Capterra badges. Canvas leads with "50% of North American students"; Blackboard shows FedRAMP &amp; ISO certs. CampusOS shows none.</p></div>
+    <div class="finding-row"><div class="fnm">3</div><p><strong>Thin top-of-funnel.</strong> No pricing, about, blog, or resources pages exist. Canvas and Blackboard both run deep resource libraries, communities, and annual conferences.</p></div>
+    <div class="finding-row"><div class="fnm">4</div><p><strong>Strong fundamentals to build on:</strong> modern font stack, distinctive gold palette, excellent technical SEO, and a genuinely differentiated "all-in-one operating system" story neither competitor can match.</p></div>
+    <div class="finding-row"><div class="fnm">5</div><p><strong>Both incumbents have exploitable weaknesses:</strong> Blackboard just exited Chapter 11 bankruptcy (brand-instability risk); both keep compliance certs gated and use vague proof. There is room to out-position on transparency.</p></div>
+  </div>
+
+  <h2>At a Glance</h2>
+  <div class="stats-row">
+    <div class="stat-card"><div class="stat-n">en_IN</div><div class="stat-l">CampusOS site locale — should be en_US for U.S. buyers</div></div>
+    <div class="stat-card"><div class="stat-n">0</div><div class="stat-l">U.S. compliance &amp; trust signals on the CampusOS site</div></div>
+    <div class="stat-card"><div class="stat-n">#1</div><div class="stat-l">Canvas's claimed LMS rank in North America</div></div>
+    <div class="stat-card"><div class="stat-n">60–90</div><div class="stat-l">Days to a U.S.-credible brand presence</div></div>
+  </div>
+
+  <div class="note">
+    <p><strong>Methodology &amp; scope.</strong> Findings are based on direct review of the three live websites on 1 June 2026 (campusos.co, instructure.com, blackboard.com). CampusOS's homepage is a client-rendered app; its visible findings are drawn from observable metadata, structured data, fonts, sitemap, and rendered feature pages. This report covers <em>brand and web presence</em>, not the underlying product capability.</p>
+  </div>
+
+</div>
+</div>
+
+<!-- SECTION 1: SIDE BY SIDE -->
+<div class="page">
+<div class="body-page">
+
+  <div class="section-block">
+    <div class="snum">01</div>
+    <div><div class="stitle">Brand Comparison — Side by Side</div><div class="ssub">CampusOS measured against the two LMS brands U.S. buyers know best</div></div>
+  </div>
+
+  <table>
+    <thead><tr>
+      <th width="17%">Dimension</th>
+      <th class="col-co" width="28%">CampusOS</th>
+      <th width="27%">Canvas (Instructure)</th>
+      <th width="28%">Blackboard</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td class="dim">Visual identity</td>
+        <td class="col-co">Distinctive gold (#FFC100) on white; modern sans stack (Public Sans, Plus Jakarta, Inter). Clean and current — but logo &amp; imagery low-profile.</td>
+        <td>Mature parent-brand system; Canvas red accent, authentic learner photography, public-company polish.</td>
+        <td>Black/white + gold; flat enterprise-SaaS look. Fresh 2026 rebrand deliberately sheds the "legacy" reputation.</td>
+      </tr>
+      <tr>
+        <td class="dim">Positioning</td>
+        <td class="col-co">"The Operating System for Education" — all-in-one (LMS+SIS+CRM). <span class="tag tag-g">Strongest story</span> but framed as "College ERP."</td>
+        <td>"World-leading LMS" + a future-ready <strong>ecosystem</strong> (Canvas + Mastery + Parchment). A category, not a product.</td>
+        <td>"Teaching and learning like never before" — AI-powered, "now an independent company focused entirely on T&amp;L."</td>
+      </tr>
+      <tr>
+        <td class="dim">Tone of voice</td>
+        <td class="col-co">Feature-dense, efficiency-focused ("replace 50+ tools"). Functional, less emotional.</td>
+        <td>Confident, warm, outcomes-led ("most-loved LMS," "fueling minds").</td>
+        <td>Aspirational, educator-centric, AI-forward.</td>
+      </tr>
+      <tr>
+        <td class="dim">Trust &amp; proof</td>
+        <td class="col-co"><span class="tag tag-r">None visible</span> No U.S. logos, testimonials, or review badges.</td>
+        <td><span class="tag tag-g">Very strong</span> "50% of NA students," every Ivy, 8,000+ customers, G2/Capterra leader, named case studies.</td>
+        <td><span class="tag tag-a">Moderate</span> "Millions of learners," ~8 logos, STEVIE &amp; other awards — but no hard market-share numbers.</td>
+      </tr>
+      <tr>
+        <td class="dim">Compliance signals</td>
+        <td class="col-co"><span class="tag tag-r">India-only</span> NAAC / NEP / UGC. No FERPA, SOC 2, or GDPR anywhere.</td>
+        <td><span class="tag tag-a">Gated</span> "Globally recognized standards," 99.9% uptime; specific certs behind a trust portal.</td>
+        <td><span class="tag tag-g">Explicit</span> FedRAMP, ISO 27001/27701 shown; Ally accessibility; Title II callout.</td>
+      </tr>
+      <tr>
+        <td class="dim">Locale &amp; pricing</td>
+        <td class="col-co"><span class="tag tag-r">en_IN · INR</span> Reads as an India-market site.</td>
+        <td>U.S.-native; sales-led, no public pricing.</td>
+        <td>U.S.-native; sales-led, exploratory CTAs.</td>
+      </tr>
+      <tr>
+        <td class="dim">Content depth</td>
+        <td class="col-co"><span class="tag tag-r">Thin</span> Product feature pages only — no blog, resources, or pricing page.</td>
+        <td><span class="tag tag-g">Deep</span> Blog, research, webinars, community, InstructureCon conference.</td>
+        <td><span class="tag tag-a">Solid</span> Community, case studies, Trust Center, awards.</td>
+      </tr>
+      <tr>
+        <td class="dim">Conversion path</td>
+        <td class="col-co">CTAs not surfaced publicly; no clear demo/contact funnel for U.S. buyers.</td>
+        <td>"Request a demo" repeated; clear sales-led motion.</td>
+        <td>Softer "Explore" / "Learn More"; weaker funnel.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <p><strong>The pattern:</strong> CampusOS owns the best <em>product narrative</em> of the three (a true all-in-one OS), but presents the <em>weakest brand evidence</em> to a U.S. buyer. Canvas wins on proof and ecosystem; Blackboard wins on compliance display and AI messaging. CampusOS currently wins on neither — despite a superior underlying offer.</p>
+  </div>
+
+</div>
+</div>
+
+<!-- SECTION 2: SCORECARD -->
+<div class="page">
+<div class="body-page">
+
+  <div class="section-block">
+    <div class="snum">02</div>
+    <div><div class="stitle">Brand Readiness Scorecard</div><div class="ssub">Directional scoring of each brand's U.S.-market web presence (0–10)</div></div>
+  </div>
+
+  <p>Scores are a directional assessment of <strong>U.S.-market brand readiness as expressed on each website</strong> — not a verdict on product quality. They show where CampusOS must close ground fastest.</p>
+
+  <table>
+    <thead><tr><th width="34%">Brand dimension</th><th width="22%" style="text-align:center">CampusOS</th><th width="22%" style="text-align:center">Canvas</th><th width="22%" style="text-align:center">Blackboard</th></tr></thead>
+    <tbody class="score-row">
+      <tr>
+        <td class="dim">Visual modernity</td>
+        <td><span class="score s-co">7</span><div class="bar-wrap"><div class="bar" style="width:70%;background:#d97706"></div></div></td>
+        <td><span class="score s-cv">9</span><div class="bar-wrap"><div class="bar" style="width:90%;background:#166534"></div></div></td>
+        <td><span class="score s-bb">8</span><div class="bar-wrap"><div class="bar" style="width:80%;background:#1e40af"></div></div></td>
+      </tr>
+      <tr>
+        <td class="dim">Positioning clarity</td>
+        <td><span class="score s-co">6</span><div class="bar-wrap"><div class="bar" style="width:60%;background:#d97706"></div></div></td>
+        <td><span class="score s-cv">9</span><div class="bar-wrap"><div class="bar" style="width:90%;background:#166534"></div></div></td>
+        <td><span class="score s-bb">8</span><div class="bar-wrap"><div class="bar" style="width:80%;background:#1e40af"></div></div></td>
+      </tr>
+      <tr>
+        <td class="dim">U.S. localization</td>
+        <td><span class="score s-co">1</span><div class="bar-wrap"><div class="bar" style="width:10%;background:#d97706"></div></div></td>
+        <td><span class="score s-cv">10</span><div class="bar-wrap"><div class="bar" style="width:100%;background:#166534"></div></div></td>
+        <td><span class="score s-bb">10</span><div class="bar-wrap"><div class="bar" style="width:100%;background:#1e40af"></div></div></td>
+      </tr>
+      <tr>
+        <td class="dim">Trust &amp; social proof</td>
+        <td><span class="score s-co">1</span><div class="bar-wrap"><div class="bar" style="width:10%;background:#d97706"></div></div></td>
+        <td><span class="score s-cv">10</span><div class="bar-wrap"><div class="bar" style="width:100%;background:#166534"></div></div></td>
+        <td><span class="score s-bb">6</span><div class="bar-wrap"><div class="bar" style="width:60%;background:#1e40af"></div></div></td>
+      </tr>
+      <tr>
+        <td class="dim">Compliance display</td>
+        <td><span class="score s-co">1</span><div class="bar-wrap"><div class="bar" style="width:10%;background:#d97706"></div></div></td>
+        <td><span class="score s-cv">6</span><div class="bar-wrap"><div class="bar" style="width:60%;background:#166534"></div></div></td>
+        <td><span class="score s-bb">8</span><div class="bar-wrap"><div class="bar" style="width:80%;background:#1e40af"></div></div></td>
+      </tr>
+      <tr>
+        <td class="dim">Content &amp; resources</td>
+        <td><span class="score s-co">2</span><div class="bar-wrap"><div class="bar" style="width:20%;background:#d97706"></div></div></td>
+        <td><span class="score s-cv">9</span><div class="bar-wrap"><div class="bar" style="width:90%;background:#166534"></div></div></td>
+        <td><span class="score s-bb">7</span><div class="bar-wrap"><div class="bar" style="width:70%;background:#1e40af"></div></div></td>
+      </tr>
+      <tr>
+        <td class="dim">Conversion / CTA</td>
+        <td><span class="score s-co">3</span><div class="bar-wrap"><div class="bar" style="width:30%;background:#d97706"></div></div></td>
+        <td><span class="score s-cv">9</span><div class="bar-wrap"><div class="bar" style="width:90%;background:#166534"></div></div></td>
+        <td><span class="score s-bb">5</span><div class="bar-wrap"><div class="bar" style="width:50%;background:#1e40af"></div></div></td>
+      </tr>
+      <tr style="border-top:2px solid #0D1B2A;">
+        <td class="dim" style="font-size:11px;">Overall U.S. readiness</td>
+        <td style="text-align:left"><span class="score s-co" style="font-size:14px;">3.0 / 10</span></td>
+        <td style="text-align:left"><span class="score s-cv" style="font-size:14px;">8.9 / 10</span></td>
+        <td style="text-align:left"><span class="score s-bb" style="font-size:14px;">7.4 / 10</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <p><strong>Read this way:</strong> CampusOS's gap is <em>not</em> in how its product looks or what it does — visual modernity scores well. The gap is entirely in the four buyer-facing trust dimensions: <strong>localization, social proof, compliance display, and content</strong>. These are exactly the items that can be fixed with marketing work, not engineering.</p>
+  </div>
+
+</div>
+</div>
+
+<!-- SECTION 3: WHAT WE'RE LACKING -->
+<div class="page">
+<div class="body-page">
+
+  <div class="section-block">
+    <div class="snum">03</div>
+    <div><div class="stitle">What CampusOS Is Lacking</div><div class="ssub">The specific brand assets a U.S. buyer expects — and does not find</div></div>
+  </div>
+
+  <table>
+    <thead><tr><th width="26%">Missing element</th><th width="14%">Severity</th><th width="60%">Why it matters for the U.S. market</th></tr></thead>
+    <tbody>
+      <tr><td class="dim">U.S. locale &amp; vocabulary</td><td><span class="tag tag-r">Critical</span></td><td>en_IN, INR, and "TnP / NAAC / College ERP" tell a U.S. buyer the product wasn't built for them. They search "SIS," "LMS," "campus management" — and expect dollars.</td></tr>
+      <tr><td class="dim">FERPA messaging</td><td><span class="tag tag-r">Critical</span></td><td>FERPA is the first procurement filter for any U.S. institution. Its total absence ends conversations before they begin.</td></tr>
+      <tr><td class="dim">U.S. customer proof</td><td><span class="tag tag-r">Critical</span></td><td>Canvas names Ivies and "50% of students"; Blackboard shows logos. CampusOS shows no U.S. institution, logo, or testimonial — buyers won't be first with no peer reference.</td></tr>
+      <tr><td class="dim">SOC 2 / security display</td><td><span class="tag tag-a">High</span></td><td>U.S. IT buyers check for SOC 2 Type II and a security/trust page. Blackboard surfaces FedRAMP &amp; ISO; CampusOS surfaces nothing.</td></tr>
+      <tr><td class="dim">Third-party review badges</td><td><span class="tag tag-a">High</span></td><td>G2 and Capterra are where U.S. buyers validate vendors. CampusOS has no listing or badge; Canvas is a category leader on both.</td></tr>
+      <tr><td class="dim">Pricing / about / resources</td><td><span class="tag tag-a">High</span></td><td>No pricing, about, blog, or resource pages exist. This starves SEO and gives buyers nothing to self-educate with — both competitors run deep libraries.</td></tr>
+      <tr><td class="dim">Clear U.S. conversion path</td><td><span class="tag tag-a">High</span></td><td>No surfaced "Request a demo" / "Talk to U.S. sales" funnel. A U.S. buyer ready to act has no obvious next step.</td></tr>
+      <tr><td class="dim">Accessibility statement</td><td><span class="tag tag-b">Medium</span></td><td>ADA / WCAG 2.1 / Section 508 are expected in U.S. public-institution RFPs. No public statement exists.</td></tr>
+      <tr><td class="dim">U.S. presence signals</td><td><span class="tag tag-b">Medium</span></td><td>No U.S. phone number, address, or support contact — small cues that materially raise perceived credibility.</td></tr>
+      <tr><td class="dim">Emotional brand narrative</td><td><span class="tag tag-b">Medium</span></td><td>Messaging is feature/efficiency led. Canvas and Blackboard sell outcomes and educator empowerment — CampusOS reads transactional by comparison.</td></tr>
+    </tbody>
+  </table>
+
+</div>
+</div>
+
+<!-- SECTION 4: OPPORTUNITIES -->
+<div class="page">
+<div class="body-page">
+
+  <div class="section-block">
+    <div class="snum">04</div>
+    <div><div class="stitle">Where CampusOS Can Win</div><div class="ssub">Brand wedges the incumbents leave open</div></div>
+  </div>
+
+  <p>The competitors are strong, but not invulnerable. Three brand openings are available to CampusOS right now:</p>
+
+  <div class="comp-grid">
+    <div class="comp-card cv">
+      <div class="comp-type">Wedge 1 · The all-in-one story</div>
+      <h4>Own "one platform, not fifty"</h4>
+      <p><span class="lbl">Gap:</span> Canvas is an LMS-plus-ecosystem of separate products; Blackboard is "focused on teaching &amp; learning" only.</p>
+      <p><span class="lbl">Move:</span> CampusOS is genuinely unified (LMS + SIS + CRM + attendance + AI). Lead the U.S. brand with this — neither rival can claim it.</p>
+    </div>
+    <div class="comp-card bb">
+      <div class="comp-type">Wedge 2 · Trust transparency</div>
+      <h4>Make compliance visible</h4>
+      <p><span class="lbl">Gap:</span> Canvas gates its certs behind a portal; Blackboard names some but buries FERPA/WCAG specifics.</p>
+      <p><span class="lbl">Move:</span> A clear, public FERPA + security + accessibility page out-positions both on the exact items U.S. buyers check first.</p>
+    </div>
+    <div class="comp-card cv">
+      <div class="comp-type">Wedge 3 · Incumbent instability</div>
+      <h4>Be the stable modern choice</h4>
+      <p><span class="lbl">Gap:</span> Blackboard just emerged from Chapter 11 bankruptcy and its 3rd rebrand in years; legacy Banner/Blackboard fatigue is high.</p>
+      <p><span class="lbl">Move:</span> Position as the fresh, affordable, modern alternative for cost-sensitive community colleges underserved by the incumbents.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p><strong>Strategic note:</strong> CampusOS does not need to out-spend Canvas. It needs to look <em>credible and U.S.-native</em> for the specific beachhead it can win first — community colleges — where Canvas/Blackboard pricing and complexity create real openings. Brand credibility is the unlock, not brand scale.</p>
+  </div>
+
+</div>
+</div>
+
+<!-- SECTION 5: RECOMMENDATIONS -->
+<div class="page">
+<div class="body-page">
+
+  <div class="section-block">
+    <div class="snum">05</div>
+    <div><div class="stitle">Branding Recommendations</div><div class="ssub">What to change, in priority order, to compete for the U.S. market</div></div>
+  </div>
+
+  <h2>Phase 1 &nbsp;—&nbsp; U.S. Credibility Foundation (Days 1–30)</h2>
+  <ul>
+    <li><strong>Launch a U.S. site experience.</strong> Set <code>og:locale: en_US</code>, switch displayed pricing to USD, and replace TnP / NAAC / NEP / UGC / "College ERP" with SIS, LMS, Career Services, and "Campus Management Platform."</li>
+    <li><strong>Publish a FERPA + security + accessibility trust page.</strong> Link it from the homepage hero. This single page clears the #1 U.S. procurement filter.</li>
+    <li><strong>Sharpen the hero message</strong> around the unique all-in-one story: e.g. "One platform from admissions to alumni — not fifty disconnected tools."</li>
+    <li><strong>Add a clear U.S. conversion path</strong> — a prominent "Request a Demo" / "Talk to U.S. Sales" CTA and a U.S. contact point.</li>
+  </ul>
+
+  <h2>Phase 2 &nbsp;—&nbsp; Proof &amp; Depth (Days 30–60)</h2>
+  <ul>
+    <li><strong>Build the trust layer:</strong> list on G2 and Capterra, begin a review program, and secure 1–2 reference institutions (even pilots) to feature as logos and testimonials.</li>
+    <li><strong>Add core marketing pages:</strong> pricing/about/resources + a starter blog targeting U.S. search intent ("Banner alternative," "Blackboard alternative," "FERPA-compliant campus platform").</li>
+    <li><strong>Strengthen visual brand:</strong> add authentic U.S.-campus imagery and an outcomes-led narrative to match the emotional register of Canvas.</li>
+  </ul>
+
+  <h2>Phase 3 &nbsp;—&nbsp; Authority (Days 60–90+)</h2>
+  <ul>
+    <li><strong>Pursue SOC 2 Type II</strong> and display progress; aim for EDUCAUSE membership/listing.</li>
+    <li><strong>Stand up a content engine</strong> (guides, webinars) to begin matching competitor resource depth and compound SEO.</li>
+    <li><strong>Develop one bold, defensible proof stat</strong> as pilots convert — the kind of claim Canvas uses to win the room.</li>
+  </ul>
+
+  <div class="note">
+    <p><strong>Brand-system guardrail:</strong> keep the existing gold/navy palette and modern type — they already score well and differentiate CampusOS from Canvas red and Blackboard black. The work is localization, proof, and depth, not a visual rebrand.</p>
+  </div>
+
+</div>
+</div>
+
+<!-- SECTION 6: CONCLUSION -->
+<div class="page">
+<div class="body-page">
+
+  <div class="section-block">
+    <div class="snum">06</div>
+    <div><div class="stitle">Conclusion</div><div class="ssub">A strong product behind a brand that doesn't yet speak American</div></div>
+  </div>
+
+  <p>CampusOS competes from a position of genuine product strength: a unified, modern, affordable platform entering a market where the incumbents are expensive, fragmented, and — in Blackboard's case — recovering from bankruptcy. Canvas sets the bar for brand proof; Blackboard sets it for compliance display. CampusOS today meets neither, because its website still speaks to the Indian market.</p>
+
+  <p>The encouraging reality is that the entire gap is addressable through <strong>branding and marketing work, not product development</strong>. Localizing the language, surfacing FERPA and security, building U.S. proof, and giving buyers a clear path to act would move CampusOS from a 3/10 to a competitive U.S. brand presence within a quarter.</p>
+
+  <h2>Three Actions to Start This Week</h2>
+  <div class="action-row">
+    <div class="action-box"><div class="action-num">1</div><p>Switch the site to en_US + USD and strip every India-specific term from U.S.-facing pages.</p></div>
+    <div class="action-box"><div class="action-num">2</div><p>Publish a FERPA + security + accessibility trust page and link it from the homepage hero.</p></div>
+    <div class="action-box"><div class="action-num">3</div><p>Lead the hero with the all-in-one story and add a clear "Request a Demo" U.S. CTA.</p></div>
+  </div>
+
+</div>
+
+<div class="doc-footer">
+  <span>CampusOS — USA Competitive Branding Analysis</span>
+  <span>June 2026</span>
+  <span>Confidential — For Internal Use Only</span>
+</div>
+</div>
+
+</div><!-- end doc-wrap -->
+</body>
+</html>

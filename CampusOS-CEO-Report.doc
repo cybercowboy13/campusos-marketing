@@ -1,0 +1,495 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+      xmlns:w="urn:schemas-microsoft-com:office:word"
+      xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="UTF-8">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<title>CampusOS — North America Market Entry Strategy</title>
+<style>
+  /* Page setup */
+  @page {
+    size: 8.5in 11in;
+    margin: 1.0in 1.0in 1.0in 1.0in;
+    mso-header-margin: .5in;
+    mso-footer-margin: .5in;
+  }
+  @page cover {
+    size: 8.5in 11in;
+    margin: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    color: #1a1a2e;
+    line-height: 1.6;
+  }
+
+  /* Headings */
+  h1 {
+    font-family: Arial, sans-serif;
+    font-size: 18pt;
+    font-weight: bold;
+    color: #0D1B2A;
+    margin-top: 24pt;
+    margin-bottom: 8pt;
+    border-bottom: 3pt solid #FFC100;
+    padding-bottom: 4pt;
+    page-break-before: always;
+  }
+  h1.first { page-break-before: avoid; }
+  h2 {
+    font-family: Arial, sans-serif;
+    font-size: 13pt;
+    font-weight: bold;
+    color: #1E3A5F;
+    margin-top: 18pt;
+    margin-bottom: 6pt;
+  }
+  h3 {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    font-weight: bold;
+    color: #0077B6;
+    margin-top: 12pt;
+    margin-bottom: 4pt;
+  }
+  p {
+    font-size: 11pt;
+    color: #334155;
+    margin-bottom: 10pt;
+    line-height: 1.65;
+  }
+  li {
+    font-size: 11pt;
+    color: #334155;
+    margin-bottom: 5pt;
+    line-height: 1.6;
+  }
+
+  /* Tables */
+  table { border-collapse: collapse; width: 100%; margin: 12pt 0; font-size: 10pt; }
+  th {
+    background-color: #0D1B2A;
+    color: #FFFFFF;
+    padding: 9pt 11pt;
+    font-weight: bold;
+    font-size: 9pt;
+    text-align: left;
+    border: 1pt solid #0D1B2A;
+  }
+  td {
+    padding: 8pt 11pt;
+    border: 1pt solid #D1D5DB;
+    color: #334155;
+    vertical-align: top;
+  }
+  tr.alt td { background-color: #F8FAFC; }
+
+  /* Cover */
+  .cover-page {
+    page: cover;
+    background-color: #0D1B2A;
+    color: white;
+    padding: 1in 1in 0.75in 1in;
+    min-height: 11in;
+  }
+
+  /* Callout */
+  .callout {
+    background-color: #FFF8E7;
+    border-left: 4pt solid #FFC100;
+    padding: 12pt 16pt;
+    margin: 12pt 0;
+    font-size: 10.5pt;
+    color: #334155;
+  }
+  .exec-box {
+    background-color: #0D1B2A;
+    color: #CBD5E1;
+    padding: 18pt 22pt;
+    margin: 14pt 0;
+  }
+  .section-divider {
+    background-color: #1E3A5F;
+    color: white;
+    padding: 14pt 18pt;
+    margin: 20pt 0 12pt 0;
+  }
+  .finding {
+    background-color: #F0F4F8;
+    border-left: 4pt solid #FFC100;
+    padding: 12pt 16pt;
+    margin: 10pt 0;
+  }
+  .phase-cell-1 { border-left: 4pt solid #FFC100; }
+  .phase-cell-2 { border-left: 4pt solid #0077B6; }
+  .phase-cell-3 { border-left: 4pt solid #10B981; }
+  .badge-red {
+    background-color: #FEE2E2;
+    color: #991B1B;
+    padding: 1pt 6pt;
+    font-size: 9pt;
+    font-weight: bold;
+  }
+  .badge-green {
+    background-color: #DCFCE7;
+    color: #166534;
+    padding: 1pt 6pt;
+    font-size: 9pt;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════ COVER PAGE ══════════════ -->
+<table width="100%" style="background-color:#0D1B2A; border:none; padding:0; margin:0;" cellpadding="0" cellspacing="0">
+<tr><td style="padding:60pt 72pt 40pt 72pt; border:none;">
+
+  <p style="font-size:10pt; color:#FFC100; font-weight:bold; letter-spacing:2pt; text-transform:uppercase; margin-bottom:48pt;">CampusOS by Engaze</p>
+
+  <p style="font-size:36pt; font-weight:bold; color:#FFFFFF; line-height:1.1; margin-bottom:6pt;">North America</p>
+  <p style="font-size:36pt; font-weight:bold; color:#FFC100; line-height:1.1; margin-bottom:6pt;">Market Entry</p>
+  <p style="font-size:36pt; font-weight:bold; color:#FFFFFF; line-height:1.1; margin-bottom:20pt;">Strategy</p>
+
+  <p style="font-size:14pt; color:#94A3B8; font-weight:300; margin-bottom:8pt;">Strategic Positioning &amp; Go-to-Market Recommendations</p>
+
+  <table width="100%" style="border:none; margin-top:36pt;" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="33%" style="border:none; border-top:2pt solid #334155; padding-top:12pt;">
+      <p style="font-size:8pt; color:#64748B; text-transform:uppercase; letter-spacing:1pt; margin-bottom:3pt;">Prepared For</p>
+      <p style="font-size:10pt; color:#E2E8F0; margin:0;">CampusOS Executive Leadership</p>
+    </td>
+    <td width="33%" style="border:none; border-top:2pt solid #334155; padding-top:12pt;">
+      <p style="font-size:8pt; color:#64748B; text-transform:uppercase; letter-spacing:1pt; margin-bottom:3pt;">Date</p>
+      <p style="font-size:10pt; color:#E2E8F0; margin:0;">May 2026</p>
+    </td>
+    <td width="33%" style="border:none; border-top:2pt solid #334155; padding-top:12pt;">
+      <p style="font-size:8pt; color:#64748B; text-transform:uppercase; letter-spacing:1pt; margin-bottom:3pt;">Classification</p>
+      <p style="font-size:10pt; color:#EF4444; font-weight:bold; margin:0;">CONFIDENTIAL</p>
+    </td>
+  </tr>
+  </table>
+
+</td></tr>
+</table>
+
+<br clear="all" style="page-break-before:always">
+
+<!-- ══════════════ EXECUTIVE SUMMARY ══════════════ -->
+<h1 class="first">Executive Summary</h1>
+
+<div class="exec-box">
+  <p style="color:#FFC100; font-weight:bold; font-size:11pt; margin-bottom:8pt;">Strategic Overview</p>
+  <p style="color:#CBD5E1; margin-bottom:8pt;">CampusOS has built a compelling all-in-one campus management platform gaining strong traction in the Indian higher education market. The product&#8217;s core value proposition &#8212; replacing 50+ disconnected tools with a unified LMS, SIS, Career Services CRM, attendance, and AI insights platform &#8212; maps directly to a massive, underserved pain point in North America.</p>
+  <p style="color:#CBD5E1; margin:0;">However, the current positioning, terminology, compliance messaging, and SEO strategy are calibrated for Indian institutions and will create significant friction with North American buyers. This report outlines the strategic adjustments required to successfully enter the North American market.</p>
+</div>
+
+<h2>Key Findings</h2>
+<div class="finding">
+  <p style="margin-bottom:6pt;"><strong style="color:#0D1B2A;">1.</strong>&nbsp; The North American higher education software market exceeds <strong>$10 billion annually</strong></p>
+  <p style="margin-bottom:6pt;"><strong style="color:#0D1B2A;">2.</strong>&nbsp; <strong>1,100+ community colleges</strong> represent an immediately accessible beachhead &#8212; underserved by overpriced legacy systems</p>
+  <p style="margin-bottom:6pt;"><strong style="color:#0D1B2A;">3.</strong>&nbsp; Current terminology (<strong>TnP CRM, NAAC accreditation, College ERP</strong>) is India-specific and will alienate North American buyers</p>
+  <p style="margin-bottom:6pt;"><strong style="color:#0D1B2A;">4.</strong>&nbsp; <strong>FERPA compliance messaging</strong> is non-negotiable for US institutions and is currently absent</p>
+  <p style="margin:0;"><strong style="color:#0D1B2A;">5.</strong>&nbsp; Competitor displacement messaging vs. <strong>Ellucian Banner and Blackboard</strong> represents a major SEO and positioning opportunity</p>
+</div>
+
+<h2>At a Glance</h2>
+<table>
+  <tr>
+    <th width="25%">Metric</th>
+    <th width="25%">Figure</th>
+    <th width="50%">Significance</th>
+  </tr>
+  <tr>
+    <td><strong>Market Size</strong></td>
+    <td><strong style="color:#0077B6;">$10B+</strong></td>
+    <td>Annual North American higher ed software spend</td>
+  </tr>
+  <tr class="alt">
+    <td><strong>Total Institutions</strong></td>
+    <td><strong style="color:#0077B6;">6,000+</strong></td>
+    <td>Colleges &amp; universities in North America</td>
+  </tr>
+  <tr>
+    <td><strong>Beachhead Segment</strong></td>
+    <td><strong style="color:#0077B6;">1,100+</strong></td>
+    <td>Community colleges — fastest procurement, most underserved</td>
+  </tr>
+  <tr class="alt">
+    <td><strong>Tools Replaced</strong></td>
+    <td><strong style="color:#0077B6;">50+</strong></td>
+    <td>Disconnected tools CampusOS replaces per institution</td>
+  </tr>
+</table>
+
+<!-- ══════════════ SECTION 1 ══════════════ -->
+<h1>01 &nbsp;&#8212;&nbsp; Market Opportunity</h1>
+
+<p>North America is home to approximately <strong>6,000 colleges and universities</strong>, serving over 20 million students. The higher education software market in this region exceeds $10 billion annually and is dominated by aging, expensive legacy systems that institutions actively want to replace.</p>
+
+<h2>Market Segmentation</h2>
+<table>
+  <tr>
+    <th width="25%">Segment</th>
+    <th width="12%">Count</th>
+    <th width="20%">Opportunity</th>
+    <th width="43%">Key Characteristics</th>
+  </tr>
+  <tr>
+    <td><strong>Community Colleges</strong></td>
+    <td>1,100+</td>
+    <td><span class="badge-green">HIGH &#8212; Beachhead</span></td>
+    <td>Faster procurement, budget-conscious, acutely underserved by Banner</td>
+  </tr>
+  <tr class="alt">
+    <td>4-Year Private Non-Profit</td>
+    <td>1,600+</td>
+    <td><span class="badge-green">HIGH</span></td>
+    <td>Wide range of sizes; small liberal arts colleges particularly underserved</td>
+  </tr>
+  <tr>
+    <td>Specialized Institutions</td>
+    <td>900+</td>
+    <td><span class="badge-green">HIGH</span></td>
+    <td>Art schools, theology, technical &#8212; often on severely outdated systems</td>
+  </tr>
+  <tr class="alt">
+    <td>4-Year Public Universities</td>
+    <td>700+</td>
+    <td>Medium</td>
+    <td>Longer procurement cycles; many approaching contract renewal windows</td>
+  </tr>
+  <tr>
+    <td>For-Profit Institutions</td>
+    <td>700+</td>
+    <td>Medium</td>
+    <td>Cost-sensitive; mixed regulatory environment</td>
+  </tr>
+</table>
+
+<div class="callout">
+  <strong>Why community colleges first:</strong> With 1,100+ institutions, faster procurement cycles (often a single decision-maker), acute pain from overpriced Banner implementations, and strong word-of-mouth networks within AACC and League for Innovation conferences, this segment offers the fastest path to reference customers and market proof.
+</div>
+
+<!-- ══════════════ SECTION 2 ══════════════ -->
+<h1>02 &nbsp;&#8212;&nbsp; Current State Analysis: Positioning Gaps</h1>
+
+<p>The following gaps exist between CampusOS&#8217;s current India-market positioning and what North American buyers expect. Addressing these gaps requires messaging and terminology changes &#8212; not product changes &#8212; making this the fastest and most capital-efficient path to market entry.</p>
+
+<h2>2.1 &nbsp; Terminology Mismatch</h2>
+<p>Several terms currently used throughout CampusOS&#8217;s website and marketing materials are India-specific and will create immediate friction with North American buyers.</p>
+
+<table>
+  <tr>
+    <th width="22%">Current Term</th>
+    <th width="28%">North American Equivalent</th>
+    <th width="50%">Why It Matters</th>
+  </tr>
+  <tr>
+    <td><span class="badge-red">TnP CRM</span></td>
+    <td><span class="badge-green">Career Services Management</span></td>
+    <td>&#8220;Training &amp; Placement&#8221; is an Indian university department concept with no North American equivalent. Career services departments would not recognise the term.</td>
+  </tr>
+  <tr class="alt">
+    <td><span class="badge-red">NAAC Accreditation</span></td>
+    <td><span class="badge-green">HLC / SACSCOC / WASC Support</span></td>
+    <td>NAAC is India-specific. NA institutions report to 7 regional accreditors. Mentioning NAAC signals to buyers that this product was not designed for their context.</td>
+  </tr>
+  <tr>
+    <td><span class="badge-red">College ERP</span></td>
+    <td><span class="badge-green">Campus Management Platform</span></td>
+    <td>North American buyers use SIS, LMS, or &#8220;campus management&#8221; &#8212; ERP framing creates category confusion and does not match search behaviour.</td>
+  </tr>
+  <tr class="alt">
+    <td><span class="badge-red">og:locale: en_IN</span></td>
+    <td><span class="badge-green">og:locale: en_US</span></td>
+    <td>Search engines are serving Indian results to North American searchers, significantly reducing organic discoverability in the target market.</td>
+  </tr>
+</table>
+
+<h2>2.2 &nbsp; Compliance Gaps</h2>
+<p><strong>FERPA (Family Educational Rights and Privacy Act)</strong> is the foundational federal law governing student data privacy in the United States. Any institution evaluating new software will ask about FERPA compliance in the first conversation. Its absence from CampusOS&#8217;s current marketing is a critical gap that will terminate sales conversations before they begin.</p>
+
+<table>
+  <tr>
+    <th width="35%">Compliance Requirement</th>
+    <th width="20%">Current Status</th>
+    <th width="15%">Priority</th>
+    <th width="30%">Action Required</th>
+  </tr>
+  <tr>
+    <td><strong>FERPA Compliance</strong></td>
+    <td><span class="badge-red">Not Addressed</span></td>
+    <td style="color:#DC2626; font-weight:bold;">Critical</td>
+    <td>Dedicated compliance page; homepage callout</td>
+  </tr>
+  <tr class="alt">
+    <td><strong>SOC 2 Type II Certification</strong></td>
+    <td><span class="badge-red">Not Addressed</span></td>
+    <td style="color:#DC2626; font-weight:bold;">Critical</td>
+    <td>Begin audit process immediately</td>
+  </tr>
+  <tr>
+    <td><strong>ADA / WCAG 2.1 Accessibility</strong></td>
+    <td><span class="badge-red">Not Addressed</span></td>
+    <td style="color:#D97706; font-weight:bold;">High</td>
+    <td>Accessibility audit + statement page</td>
+  </tr>
+  <tr class="alt">
+    <td><strong>US Data Residency</strong></td>
+    <td><span class="badge-red">Not Addressed</span></td>
+    <td style="color:#D97706; font-weight:bold;">High</td>
+    <td>Confirm or establish US-based hosting</td>
+  </tr>
+  <tr>
+    <td><strong>Title IX Reporting Support</strong></td>
+    <td><span class="badge-red">Not Addressed</span></td>
+    <td style="color:#D97706; font-weight:bold;">High</td>
+    <td>Add to compliance documentation</td>
+  </tr>
+</table>
+
+<h2>2.3 &nbsp; Trust Signal Gaps</h2>
+<p>North American buyers will evaluate CampusOS against well-known incumbents and will look for evidence that the platform has been validated in their market. The following trust signals are currently absent:</p>
+<ul>
+  <li>Logos of recognizable US or Canadian institutions already using the platform</li>
+  <li>G2 and Capterra reviews &#8212; the primary review platforms North American IT buyers consult</li>
+  <li>US-based phone number and customer support presence</li>
+  <li>Integrations with tools already in use: Slate CRM, Zoom, Microsoft 365, Google Workspace</li>
+  <li>Educause membership and conference presence</li>
+</ul>
+
+<!-- ══════════════ SECTION 3 ══════════════ -->
+<h1>03 &nbsp;&#8212;&nbsp; Competitive Landscape</h1>
+
+<p>The North American market is dominated by several entrenched legacy platforms. Their common thread: all are expensive, architecturally dated, and deliver poor user experiences. This is CampusOS&#8217;s core displacement opportunity.</p>
+
+<table>
+  <tr>
+    <th width="22%">Competitor</th>
+    <th width="22%">Annual Cost</th>
+    <th width="15%">Target Level</th>
+    <th width="41%">Strategic Assessment</th>
+  </tr>
+  <tr>
+    <td><strong>Ellucian Banner / Colleague</strong></td>
+    <td>$500K &#8211; $5M+</td>
+    <td style="color:#DC2626; font-weight:bold;">Primary Target</td>
+    <td>Dominant SIS, ~2,400 clients. Legacy architecture and extreme costs have created widespread dissatisfaction. The #1 displacement opportunity.</td>
+  </tr>
+  <tr class="alt">
+    <td><strong>Blackboard / Anthology</strong></td>
+    <td>High &#8212; declining</td>
+    <td style="color:#DC2626; font-weight:bold;">Primary Target</td>
+    <td>Dominant LMS losing market share rapidly. Poor UX and reputation damage have created strong replacement demand.</td>
+  </tr>
+  <tr>
+    <td><strong>Workday Student</strong></td>
+    <td>Premium</td>
+    <td style="color:#D97706; font-weight:bold;">Secondary</td>
+    <td>Growing at large research universities. Premium pricing puts it out of reach for community colleges &#8212; CampusOS&#8217;s primary target segment.</td>
+  </tr>
+  <tr class="alt">
+    <td><strong>PeopleSoft / Oracle</strong></td>
+    <td>Legacy &#8212; high TCO</td>
+    <td style="color:#D97706; font-weight:bold;">Secondary</td>
+    <td>Aging system with uncertain Oracle roadmap. Institutions are actively exploring migration options.</td>
+  </tr>
+</table>
+
+<div class="callout">
+  <strong>CampusOS competitive position:</strong> Modern architecture + unified platform + affordable pricing = everything the incumbents are not. The positioning message is already there &#8212; it just needs to be delivered in North American language with North American compliance credentials.
+</div>
+
+<!-- ══════════════ SECTION 4 ══════════════ -->
+<h1>04 &nbsp;&#8212;&nbsp; Strategic Recommendations</h1>
+
+<h2>4.1 &nbsp; Terminology &amp; Messaging Overhaul &nbsp;&#8212;&nbsp; Days 1&#8211;30</h2>
+<p>Replace all India-specific terminology across the website, marketing materials, and sales collateral with North American equivalents. Update og:locale to en_US. Rewrite meta keywords targeting North American search terms. This is the lowest-cost, highest-impact action available and should begin immediately.</p>
+
+<h2>4.2 &nbsp; FERPA Compliance Page &nbsp;&#8212;&nbsp; Days 1&#8211;30</h2>
+<p>Create a dedicated FERPA compliance page explaining how CampusOS protects student data &#8212; covering data access controls, audit logging, data residency options, and breach notification procedures. Reference this page prominently on the homepage, pricing page, and in all sales materials. No North American sales conversation can progress without it.</p>
+
+<h2>4.3 &nbsp; Competitive Displacement Landing Pages &nbsp;&#8212;&nbsp; Days 30&#8211;60</h2>
+<p>Create dedicated landing pages targeting high-intent search queries from institutions shopping for alternatives. These pages should run direct feature and price comparisons and include a free migration consultation offer:</p>
+<ul>
+  <li>&#8220;Ellucian Banner alternative for small colleges&#8221;</li>
+  <li>&#8220;Blackboard alternative for community colleges&#8221;</li>
+  <li>&#8220;Affordable student information system&#8221;</li>
+  <li>&#8220;All-in-one LMS and SIS platform&#8221;</li>
+</ul>
+
+<h2>4.4 &nbsp; Community College Pilot Program &nbsp;&#8212;&nbsp; Days 30&#8211;90</h2>
+<p>Identify 5&#8211;10 community colleges for a subsidized or free pilot program. Pilot institutions become case studies and reference customers &#8212; the single most powerful trust signal for subsequent North American sales. Target institutions through AACC and League for Innovation conference networks.</p>
+
+<h2>4.5 &nbsp; Trust Signal Development &nbsp;&#8212;&nbsp; Days 60&#8211;180</h2>
+<p>Pursue SOC 2 Type II certification. List on G2, Capterra, and Educause Connect. Establish a US customer success presence (even a single US-based CSM creates significant trust). Develop integrations with Slate, Zoom, and Microsoft 365. Apply for Educause membership and exhibit at the EDUCAUSE Annual Conference.</p>
+
+<h2>4.6 &nbsp; SEO Keyword Migration &nbsp;&#8212;&nbsp; Days 30&#8211;90</h2>
+<table>
+  <tr>
+    <th width="50%">Stop Targeting (India-Focused)</th>
+    <th width="50%">Start Targeting (North America)</th>
+  </tr>
+  <tr><td>college ERP India</td><td>Banner alternative for community colleges</td></tr>
+  <tr class="alt"><td>NAAC accreditation software</td><td>affordable student information system</td></tr>
+  <tr><td>TnP management system</td><td>FERPA compliant campus software</td></tr>
+  <tr class="alt"><td>college ERP software</td><td>all-in-one LMS and SIS platform</td></tr>
+  <tr><td>university management India</td><td>Ellucian alternative for small colleges</td></tr>
+</table>
+
+<!-- ══════════════ SECTION 5 ══════════════ -->
+<h1>05 &nbsp;&#8212;&nbsp; Go-to-Market Sequence</h1>
+
+<p>A phased 90-day plan built for speed. The majority of actions in Phases 1 and 2 require messaging and positioning changes rather than product development, meaning execution can begin immediately with existing resources.</p>
+
+<table>
+  <tr>
+    <th width="12%">Phase</th>
+    <th width="14%">Timeline</th>
+    <th width="44%">Key Actions</th>
+    <th width="30%">Success Metric</th>
+  </tr>
+  <tr>
+    <td class="phase-cell-1"><strong>Phase 1</strong><br><em style="font-size:9pt; color:#64748B;">Foundation</em></td>
+    <td>Days 1&#8211;30</td>
+    <td>Rewrite all terminology &bull; Launch FERPA page &bull; Update SEO to en_US &bull; Build competitive landing pages</td>
+    <td>Zero India-specific terms on site &bull; FERPA page live &bull; 5 competitive pages indexed</td>
+  </tr>
+  <tr class="alt">
+    <td class="phase-cell-2"><strong>Phase 2</strong><br><em style="font-size:9pt; color:#64748B;">Beachhead</em></td>
+    <td>Days 30&#8211;60</td>
+    <td>Launch community college pilot (5&#8211;10 schools) &bull; Begin G2/Capterra reviews &bull; Attend AACC or League for Innovation</td>
+    <td>3+ pilot institutions &bull; 10+ G2 reviews &bull; 2 conference leads</td>
+  </tr>
+  <tr>
+    <td class="phase-cell-3"><strong>Phase 3</strong><br><em style="font-size:9pt; color:#64748B;">Scale</em></td>
+    <td>Days 60&#8211;90</td>
+    <td>SOC 2 audit kickoff &bull; Educause membership &bull; US-based CS hire &bull; Expand to 4-year institutions</td>
+    <td>SOC 2 audit started &bull; Educause listed &bull; First 4-year institution in pipeline</td>
+  </tr>
+</table>
+
+<!-- ══════════════ SECTION 6 ══════════════ -->
+<h1>06 &nbsp;&#8212;&nbsp; Conclusion</h1>
+
+<p>CampusOS has a genuinely differentiated product entering a market ripe for disruption. The legacy systems that dominate North American higher education are expensive, dated, and deeply unpopular with the administrators who use them every day. The window for a modern, affordable, unified platform is wide open.</p>
+
+<p>The adjustments required are <strong>largely messaging and positioning changes &#8212; not product changes</strong> &#8212; which means the path to North American market entry is faster and less capital-intensive than it might appear. The core product already solves the right problems. It simply needs to speak to North American buyers in their language, with their compliance requirements addressed, and with the trust signals they expect.</p>
+
+<p>With disciplined execution of the recommendations in this report, CampusOS can establish meaningful North American market presence within <strong>12 months</strong> and a defensible position in the community college segment within <strong>90 days</strong>.</p>
+
+<div class="exec-box">
+  <p style="color:#FFC100; font-weight:bold; font-size:11pt; margin-bottom:12pt;">Three Actions to Start This Week</p>
+  <p style="color:#CBD5E1; margin-bottom:8pt;"><strong style="color:#FFC100;">1.</strong> &nbsp; Audit and rewrite all India-specific terminology across every page of campusos.co</p>
+  <p style="color:#CBD5E1; margin-bottom:8pt;"><strong style="color:#FFC100;">2.</strong> &nbsp; Create a FERPA compliance page and link it prominently from the homepage and pricing page</p>
+  <p style="color:#CBD5E1; margin:0;"><strong style="color:#FFC100;">3.</strong> &nbsp; Build a &#8220;Banner Alternative&#8221; landing page targeting community college decision-makers actively searching for a switch</p>
+</div>
+
+<br>
+<p style="font-size:9pt; color:#94A3B8; border-top:1pt solid #E2E8F0; padding-top:10pt;">CampusOS &#8212; North America Market Entry Strategy &nbsp;&bull;&nbsp; May 2026 &nbsp;&bull;&nbsp; Confidential &#8212; For Internal Use Only</p>
+
+</body>
+</html>
